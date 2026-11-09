@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Phaeton";
+    src: url(Phaeton\ Regular.otf);
+}
+
+body {
+    background:
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 42% 22%, #d35 43%, rgba(221,51,85,0) 45%),
+radial-gradient(circle closest-side at 58% 22%, #d35 43%, rgba(221,51,85,0) 45%),
+radial-gradient(circle closest-side at 50% 35%, #d35 32%, rgba(221,51,85,0) 27%),
+
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 22%, #d35 40%, rgba(221,51,85,0) 45%) 52px 50px,
+radial-gradient(circle closest-side at 60% 22%, #d35 40%, rgba(221,51,85,0) 45%) 48px 50px,
+radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 37%) 50px 50px;
+background-color:#b03;
+background-size:100px 100px;
+display: flex;
+height: 800px;
+width: 100%;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.tictac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game-board {
+	width: 450px;
+	height: 450px;
+	margin: 0 auto;
+
+    background-color: darkred;
+    color: white;
+    border: 6px solid red;
+    border-radius: 10px;
+	
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game-cell {
+    border: 6px solid red;
+    border-radius: 2px;
+    font-size: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winning-game-cell {
+    background-color: white;
+    color: darkred;
+}
+
+#game-restart-button {
+    height: 50px;
+    width: 150px;
+    border: 5px solid darkred;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 1s;
+}
+
+#game-restart-button:hover {
+    scale: 1.2;
+    background-color: darkred;
+    color: white;
+    border: 5px dotted red;
+}
+
+.wishes {
+    position: relative;
+    display: none;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    background: #ff0000;
+    background: linear-gradient(1deg, rgba(255, 0, 0, 1) 0%, rgba(255, 119, 0, 1) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px orange;
+    width: 450px;
+    height: 800px;
+}
+
+h1 {
+    font-family: "Phaeton";
+    color: white;
+    text-align: center;
+    animation: kolorki 2s infinite;
+}
+
+p {
+    font-family: "Phaeton";
+    color: white;
+    text-align: center;
+    animation: kolorki 2s infinite;
+    padding: 20px;
+    font-size: 20px;
+}
+
+button {
+    font-family: "Phaeton";
+    font-size: 30px;
+}
+
+#powrot {
+    height: 70px;
+    width: 250px;
+    border: 5px solid darkred;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 1s;
+}
+
+#powrot:hover {
+    scale: 1.2;
+    background-color: darkred;
+    color: white;
+    border: 5px dotted red;
+}
+
+@keyframes kolorki {
+    0% {
+        text-shadow: 0px 0px 10px red;
+    }
+    20% {
+        text-shadow: 0px 0px 10px yellow;
+    }
+    40% {
+        text-shadow: 0px 0px 10px green;
+    }
+    60% {
+        text-shadow: 0px 0px 10px blue;
+    }
+    80% {
+        text-shadow: 0px 0px 10px indigo;
+    }
+    100% {
+        text-shadow: 0px 0px 10px violet;
+    }
+}
+
+#logo {
+    height: 20%;
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    rotate: 15deg;
+}
